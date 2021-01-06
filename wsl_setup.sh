@@ -10,7 +10,7 @@ ls -l /mnt
 ln -s /mnt/e/projects
 #verify link point to windows directory.
 ls -l
-#Make script fpythonile in mounted Windows drive called "wsl_setup.sh".
+#Make script in mounted Windows drive called "wsl_setup.sh".
 #touch /mnt/e/projects/terminal/wsl_setup.sh
 #give it execution permission
 chmod 755 /mnt/e/projects/terminal/wsl_setup.sh
