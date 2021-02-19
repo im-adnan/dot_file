@@ -8,7 +8,7 @@
 {
     "$schema": "https://aka.ms/terminal-profiles-schema",
 
-    "defaultProfile": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
+    "defaultProfile": "{914a0d3c-9db4-56f8-a8ac-65f4b7ea8b09}",
 
     // You can add more global application settings here.
     // To learn more about global settings, visit https://aka.ms/terminal-global-settings
@@ -28,50 +28,69 @@
         "defaults":
         {
             // Put settings here that you want to apply to all profiles.
-            "padding": "2, 4, 2, 16"
+            // Put settings here that you want to apply to all profiles.
+            "padding": "2, 4, 2, 16",
+            "fontFace": "Hack Nerd Font",
+            "useAcrylic": true,
+            "acrylicOpacity": 0.5
             //"experimental.retroTerminalEffect": true,
-            //"snapToGridOnResize": false,
-            //"tabWidthMode": "compact",
             //"fontFace": "PxPlus IBM VGA8",
-            //"fontSize" : 16,
-            //"fontWeight": "medium"
         },
         "list":
         [
+            {
+                "guid": "{914a0d3c-9db4-56f8-a8ac-65f4b7ea8b09}",
+                "hidden": false,
+                "name": "openSUSE-Leap-15.2",
+                "source": "Windows.Terminal.Wsl",
+                "startingDirectory": "//wsl$/openSUSE-Leap-15.2/home/jugheadxix/",
+                "icon" : "ms-appdata:///roaming/suse.png",
+                "tabTitle": "openSUSE-Home",
+                "suppressApplicationTitle": true,
+                "colorScheme": "BlulocoLight"
+                
+            },
+            {
+                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+                "hidden": false,
+                "name": "Ubuntu",
+                "source": "Windows.Terminal.Wsl",
+                "startingDirectory": "//wsl$/Ubuntu/home/jugheadxix/",
+                "icon" : "ms-appdata:///roaming/ubuntu.png",
+                "tabTitle": "Ubuntu-Home",
+                "suppressApplicationTitle": true,
+                "colorScheme": "Ubuntu"
+            },
             {
                 // Make changes here to the powershell.exe profile.
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "name": "Windows PowerShell",
                 "commandline": "powershell.exe",
-                "hidden": false
+                "hidden": false,
+                "colorScheme": "Cyberdyne"
             },
             {
                 // Make changes here to the cmd.exe profile.
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "name": "Command Prompt",
                 "commandline": "cmd.exe",
-                "hidden": false
-            },
-            {
-                "guid": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
                 "hidden": false,
-                "name": "Debian",
-                "source": "Windows.Terminal.Wsl",
-                "startingDirectory": "//wsl$/Debian/home/jughead/",
-                "fontFace": "Hack Nerd Font",
-                "useAcrylic": true,
-                "acrylicOpacity": 0.8,
-                "icon" : "ms-appdata:///roaming/debian.png",
-                "tabTitle": "Debian-Home",
-                "suppressApplicationTitle": true,
-                "colorScheme": "Gruvbox Dark"
+                "experimental.retroTerminalEffect": true,
+                "fontFace": "PxPlus IBM VGA8"
             },
             {
                 "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
                 "hidden": false,
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
+                "hidden": false,
+                "name": "Debian",
+                "source": "Windows.Terminal.Wsl"
             }
+          
         ]
     },
 
@@ -98,8 +117,70 @@
             "brightWhite": "#e6d4a3",
             "background": "#1e1e1e",
             "foreground": "#e6d4a3"
+          },
+          {
+            "name": "BlulocoLight",
+            "black": "#cbccd5",
+            "red": "#c90e42",
+            "green": "#21883a",
+            "yellow": "#d54d17",
+            "blue": "#1e44dd",
+            "purple": "#6d1bed",
+            "cyan": "#1f4d7a",
+            "white": "#000000",
+            "brightBlack": "#dedfe8",
+            "brightRed": "#fc4a6d",
+            "brightGreen": "#34b354",
+            "brightYellow": "#b89427",
+            "brightBlue": "#1085d9",
+            "brightPurple": "#c00db3",
+            "brightCyan": "#5b80ad",
+            "brightWhite": "#1d1d22",
+            "background": "#f7f7f7",
+            "foreground": "#2a2c33"
+          },
+          {
+            "name": "Ubuntu",
+            "black": "#2e3436",
+            "red": "#cc0000",
+            "green": "#4e9a06",
+            "yellow": "#c4a000",
+            "blue": "#3465a4",
+            "purple": "#75507b",
+            "cyan": "#06989a",
+            "white": "#d3d7cf",
+            "brightBlack": "#555753",
+            "brightRed": "#ef2929",
+            "brightGreen": "#8ae234",
+            "brightYellow": "#fce94f",
+            "brightBlue": "#729fcf",
+            "brightPurple": "#ad7fa8",
+            "brightCyan": "#34e2e2",
+            "brightWhite": "#eeeeec",
+            "background": "#300a24",
+            "foreground": "#eeeeec"
+          },
+          {
+            "name": "Cyberdyne",
+            "black": "#080808",
+            "red": "#ff8373",
+            "green": "#00c172",
+            "yellow": "#d2a700",
+            "blue": "#0071cf",
+            "purple": "#ff90fe",
+            "cyan": "#6bffdd",
+            "white": "#f1f1f1",
+            "brightBlack": "#2e2e2e",
+            "brightRed": "#ffc4be",
+            "brightGreen": "#d6fcba",
+            "brightYellow": "#fffed5",
+            "brightBlue": "#c2e3ff",
+            "brightPurple": "#ffb2fe",
+            "brightCyan": "#e6e7fe",
+            "brightWhite": "#ffffff",
+            "background": "#151144",
+            "foreground": "#00ff92"
           }
-
     ],
 
     // Add custom actions and keybindings to this array.
