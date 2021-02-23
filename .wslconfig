@@ -1,0 +1,6 @@
+[wsl2]
+memory=512MB
+processors=2
+swap=4GB
+swapFile="D:\\Program Files\\linux\\swap"
+localhostForwading=true

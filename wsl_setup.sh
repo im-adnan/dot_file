@@ -1,10 +1,14 @@
+sudo apt update && upgrade
+sudo apt install wget curl git
+sudo apt install htop
+sudo apt install nano
 
-#update and upgrade packages.
-#sudo apt update
-#sudo apt upgrade
+#install g++
+sudo apt install g++
+
 #making link to windows storage.
 #create a directory in windows
-#mkdir /mnt/e/projects
+mkdir /mnt/e/projects
 #if error check.
 ls -l /mnt
 #link Create the link to “e:\\projects”.
@@ -12,13 +16,10 @@ ln -s /mnt/e/projects
 #verify link point to windows directory.
 ls -l
 #Make script in mounted Windows drive called "wsl_setup.sh".
-#touch /mnt/e/projects/terminal/wsl_setup.sh
+touch /mnt/e/projects/terminal/wsl_setup.sh
 #give it execution permission
-#chmod 755 /mnt/e/projects/terminal/wsl_setup.sh
-#install git, gcc.
-sudo apt install git
-sudo apt install gcc-c++
-sudo apt install build-essential gdb
+chmod 755 /mnt/e/projects/terminal/wsl_setup.sh
+
 #install python
 sudo apt install python3
 sudo apt upgrade python3
@@ -53,17 +54,23 @@ cd
 #sudo sed -i 's/xserverbpp=24/#xserverbpp=24\nxserverbpp=128/g' /etc/xrdp/xrdp.ini
 #sudo /etc/init.d/xrdp start
 #command to fetch things from url.
-sudo apt install curl
-#installing zsh download nerd font extract and install
-sudo apt install zsh -y
+echo $SHELL #shows current user default shell
+echo $0 #shows currently running shell
+cat /etc/shells #shows available shells
+#installing download zsh and run zsh 
+sudo apt install zsh
+zsh
+#to make zsh as default shell
+sudo vim ~/.bashrc #if doing from bash otherwise 
+~/.profile #if particulr shell dont have rc files
+exec zsh #add after last line
+
 #install oh my zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 #zsh-theme 
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
 #enter q to Quite configuration wizard and p10k to show commands
-sudo apt install wget
-sudo apt install htop
-sudo apt install nano
+
 #Haker like text effect
 # git clone https://github.com/bartobri/no-more-secrets.git
 # cd ./no-more-secrets
