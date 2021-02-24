@@ -1,6 +1,5 @@
 [wsl2]
 memory=512MB
-processors=2
-swap=4GB
+processors=4
 swapFile="D:\\Program Files\\linux\\swap"
 localhostForwading=true
