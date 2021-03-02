@@ -1,7 +1,5 @@
 sudo apt update && upgrade
-sudo apt install wget curl git
-sudo apt install htop
-sudo apt install nano
+sudo apt install wget curl git htop nano
 
 #install g++
 sudo apt install g++
@@ -69,6 +67,9 @@ exec zsh #add after last line
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 #zsh-theme 
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
+#prompt size control
+POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_last
+POWERLEVEL9K_DIR_MAX_LENGTH=1
 #enter q to Quite configuration wizard and p10k to show commands
 
 #Haker like text effect
